@@ -19,6 +19,8 @@ install_or_skip() {
 sudo apt update
 sudo apt-get install curl git 
 
+install_or_skip "Add" "arabic language to inputs" "gsettings set org.gnome.desktop.input-sources sources \"[('xkb', 'us'), ('xkb', 'ara')]\"; gsettings set org.gnome.desktop.wm.keybindings switch-input-source \"['<Alt>Shift_L', '<Alt>Shift_R', '<Shift>Alt_L', '<Shift>Alt_R']\"; gsettings set org.gnome.desktop.input-sources xkb-options \"['grp:alt_shift_toggle', 'grp:lalt_lshift_toggle', 'grp:ralt_rshift_toggle', 'lv3:ralt_alt']\""
+
 install_or_skip "Set" "touchpad scrolling direction up=up and down=down" "gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false"
 install_or_skip "Set" "click on start bar minimizes or previews" "gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-previews'"
 install_or_skip "Set" "dark mode/theme" "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
