@@ -15,7 +15,7 @@ id = 1
 try:
     ws = websocket.WebSocket()
     url = "ws://{}:{}".format(host, port)
-    ws.connect(url)
+    ws.connect(url, timeout=5)
 except:
     # print("obs not running")
     exit()

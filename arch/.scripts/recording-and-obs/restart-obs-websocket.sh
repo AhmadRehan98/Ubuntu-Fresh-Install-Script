@@ -1,6 +1,6 @@
 #!/bin/bash
-
-VENV_DIR="./.obs-websocket-venv"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+VENV_DIR="$SCRIPT_DIR/.obs-websocket-venv"
 OBS_PROCESS="obs"
 log_message() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"

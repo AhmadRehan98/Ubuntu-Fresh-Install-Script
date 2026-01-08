@@ -32,4 +32,4 @@ kscreen-console | while read -r line; do
             LAST_LOG_TIME=$CURRENT_TIME
         fi
     fi
-done
+done &> /dev/null
