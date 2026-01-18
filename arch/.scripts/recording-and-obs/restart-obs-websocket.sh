@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="~/.scripts/recording-and-obs/"
 VENV_DIR="$SCRIPT_DIR/.obs-websocket-venv"
 OBS_PROCESS="obs"
 log_message() {
