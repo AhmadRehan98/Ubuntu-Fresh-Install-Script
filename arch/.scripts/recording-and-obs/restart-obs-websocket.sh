@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPT_DIR="~/.scripts/recording-and-obs/"
+SCRIPT_DIR="$HOME/.scripts/recording-and-obs"
 VENV_DIR="$SCRIPT_DIR/.obs-websocket-venv"
 OBS_PROCESS="obs"
 log_message() {
@@ -27,6 +27,6 @@ do
 done
 
 log_message "Obs shutdown python script finished"
-nohup obs --startreplaybuffer --minimize-to-tray --disable-shutdown-check >/tmp/obs_start.log 2>&1 &
+QT_QPA_PLATFORM=xcb obs --startreplaybuffer --minimize-to-tray --disable-shutdown-check >/tmp/obs_start.log 2>&1 &
 disown
 log_message "Obs successfully started again"

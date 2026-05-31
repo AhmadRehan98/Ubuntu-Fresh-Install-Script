@@ -1,6 +1,6 @@
 #!/bin/bash
 sleep 10
-SCRIPT_DIR="~/.scripts/recording-and-obs/"
+SCRIPT_DIR="$HOME/.scripts/recording-and-obs"
 OBS_SCRIPT="$SCRIPT_DIR/restart-obs-websocket.sh"
 GRACE_PERIOD=30
 chmod +x "$OBS_SCRIPT"
